@@ -1,0 +1,9 @@
+FROM rust:stretch
+
+COPY . /opt/kubelog
+
+WORKDIR /opt/kubelog
+
+RUN cargo build --release
+
+CMD ["echo", "Complete!"]
